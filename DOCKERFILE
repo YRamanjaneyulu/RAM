@@ -1,1 +1,11 @@
-hi
+FROM ubuntu:latest 
+COPY ./helloworld.txt /helloworld.txt
+ENV MY_ENV_VARIABLE="helloworld"
+RUN apt-get update
+
+# Mount a directory from the Docker volume
+# Note: This is usually specified in the 'docker run' command.
+VOLUME ["/myvolume"]
+
+# Expose a port (22 for SSH)
+EXPOSE 22
