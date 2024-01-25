@@ -22,5 +22,5 @@ jobs:
       - run:
           name: Upload website to S3 bucket
           command: |
-            aws s3 sync . s3://narra9704
-            aws s3 website s3://narra9704
+            aws s3 sync . s3://project-practice-12
+            aws s3 website s3://project-practice-12	
