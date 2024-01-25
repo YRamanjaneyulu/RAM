@@ -1,0 +1,26 @@
+Project-1:
+Config.yml
+version: 1
+jobs:
+  build:
+    docker:
+      - image: alpine:latest
+    steps:
+      - checkout
+      - run :
+          name: Install AWS CLI
+          command: |
+            apk add --no-cache python3 py3-pip
+            pip3 install --upgrade pip
+            pip3 install awscli
+      - run:
+          name: Configure AWS credentials
+          command: |
+            aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID && \
+            aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY && \
+            aws configure set default.region us-east-2
+      - run:
+          name: Upload website to S3 bucket
+          command: |
+            aws s3 sync . s3://narra9704
+            aws s3 website s3://narra9704
