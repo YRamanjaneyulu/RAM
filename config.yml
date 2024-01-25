@@ -16,9 +16,9 @@ jobs:
       - run:
           name: Configure AWS credentials
           command: |
-            aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID && \
-            aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY && \
-            aws configure set default.region us-east-2
+            aws configure set aws_access_key_id $AKIA4RXJFSZY7RQFZYWE && \
+            aws configure set aws_secret_access_key $SfkrMdT+JoVrtXi3G7ONw0soMDBdXag9jUyoYPvX && \
+            aws configure set default.region ap-south-1
       - run:
           name: Upload website to S3 bucket
           command: |
