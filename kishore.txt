@@ -1,0 +1,15 @@
+                 ****GIT$GITHUB*******
+
+
+1.Git-version control system or source code management
+
+-->git is an open distributed version control system that allows developers to track changes to their code and collaborate with other developers
+-->git prefers to a place where all the git files stored is called repository
+-->repositories two types 
+*local repository(git repo)
+*remote repository(github)
+
+
+2.we have to understand how git files move from local repository to central or remote repository
+
+-->first we have to store our code in our pc
